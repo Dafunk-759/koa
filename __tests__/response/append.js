@@ -8,7 +8,12 @@ describe("ctx.append(name, val)", () => {
     const ctx = context();
     ctx.append("x-foo", "bar1");
     ctx.append("x-foo", "bar2");
-    assert.deepStrictEqual(ctx.response.header["x-foo"], ["bar1", "bar2"]);
+    ctx.append("x-foo", "bar3");
+    assert.deepStrictEqual(ctx.response.header["x-foo"], [
+      "bar1",
+      "bar2",
+      "bar3",
+    ]);
   });
 
   it("should accept array of values", () => {
