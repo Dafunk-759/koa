@@ -8,6 +8,7 @@ describe('req.type', () => {
   it('should return type void of parameters', () => {
     const req = request()
     req.header['content-type'] = 'text/html; charset=utf-8'
+    debugger;
     assert.strictEqual(req.type, 'text/html')
   })
 
