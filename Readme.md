@@ -29,6 +29,7 @@ $ npm install koa
 const Koa = require('koa');
 const app = new Koa();
 
+console.log('hello');
 // response
 app.use(ctx => {
   ctx.body = 'Hello Koa';
